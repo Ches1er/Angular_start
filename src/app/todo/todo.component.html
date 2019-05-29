@@ -1,0 +1,24 @@
+<h1>Todo list {{time}}</h1>
+<input type="text" [(ngModel)]="taskName">
+<input type="text" [(ngModel)]="taskDesc">
+<button (click)="AddTask()">Add task</button>
+<ng-container *ngFor="let task of tasks; let i=index" >
+  <ng-container *ngIf="i==0; else Buy">
+    <p>Hello</p>
+  </ng-container>
+  <ng-template #Buy>
+    <p>Buy</p>
+  </ng-template>
+<div [class.selected]="i===selectedDiv">
+  {{task.name}}
+  <button (click)="ShowNote(i)">Show</button>
+  <button (click)="DelTask(i)">Del</button>
+</div>
+</ng-container>
+<div *ngIf="selectedTask">{{selectedTask.desc}}</div>
+<div *ngFor="let testUnit of test; let odd=even" >
+<p [ngClass]="{class1:true,class2:odd}">{{testUnit}}</p>
+</div>
+
+
+

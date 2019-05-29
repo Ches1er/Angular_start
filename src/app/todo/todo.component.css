@@ -1,0 +1,18 @@
+.selected{
+  color: rebeccapurple;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+h1{
+  color: #ccc;
+}
+.odd{
+  color: yellow;
+}
+
+.class1{
+  color: rebeccapurple;
+}
+.class2{
+  font-size: larger;
+}
